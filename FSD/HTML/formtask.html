@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Task</title>
+    <style>
+        html,body {
+            background-image: linear-gradient(to right,rgb(88, 175, 205),rgb(119, 91, 139));
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        div#main {
+            background-color: rgb(99, 99, 99);
+            width: 1200px;
+            height: 660px;
+            margin: auto;
+            margin-top: 50px;
+            border-radius: 50px;
+            opacity: 70%;
+        }
+        table {
+            color: aliceblue;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: large;
+        }
+        input {
+            width: 200px;
+            height: 40px;
+            border-radius: 50px;
+            border: 0;
+            color: grey;
+            transition: 0.4s;
+        }
+        input[type="text"]:hover,input[type="password"]:hover,select:hover,input[type="radio"]:hover,input[type="checkbox"]:hover,input[type="email"]:hover,input[type="date"]:hover {
+            opacity: 100%;
+            box-shadow: 0 0 1px 1px whitesmoke;
+        }
+        input[type="radio"],input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            border-radius: 50px;
+            border: 0;
+            color: grey;
+        }
+        input[type="submit"],input[type="reset"] {
+            background-color: rgb(19, 111, 148);
+            color: aliceblue;
+            width: 250px;
+            height: 50px;
+            border-radius: 50px;
+            opacity: 100%;
+            cursor: pointer;
+            font-size: large;
+            font-weight: bolder;
+        }
+        input[type="file"] {
+            border-radius: 0px;
+            color: skyblue;
+        }
+        input[type="submit"],input[type="button"],input[type="reset"] {
+            transition: 0.75s;
+        }
+        input[type="submit"]:hover,input[type="reset"]:hover {
+            background-color: rgb(37, 164, 214);
+            box-shadow: 0 0 2px 2px rgb(87, 149, 174);
+        }
+        #clg {
+            width: 280px;
+            height: 40px;
+            border-radius: 50px;
+            border: 0;
+            color: grey;
+            transition: 0.4s;
+        }
+    </style>
+</head>
+<body>
+        <div id="main">
+            <!-- <fieldset>
+                <legend style="text-align: center;">Chanakya</legend> -->
+            <form>
+            <div style="height: 100%;width:50%;float: left;">
+                <center>
+                    <table cellpadding="26">
+                        <tr>
+                            <td>First Name:</td>
+                            <td><input type="text" placeholder="First Name"></td>
+                        </tr>
+                        <tr>
+                            <td>Age:</td>
+                            <td><input type="number" placeholder="Enter your Age"></td>
+                        </tr>
+                        <tr>
+                            <td>Gender:</td>
+                            <td>
+                                <input type="radio" id="male" value="M" name="gender">
+                                <label for="male">Male</label>
+                                <input type="radio" id="female" value="F" name="gender">
+                                <label for="female">Female</label>
+                                <input type="radio" id="other" value="O" name="gender">
+                                <label for="other">Other</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>College:</td>
+                            <td><select name="clg" id="clg">
+                                <option>--select--</option>
+                                <option>Aditya Engineering College</option>
+                                <option>Aditya College of Engineering & Technology</option>
+                                <option>Aditya College of Engineering</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td>E-Mail:</td>
+                            <td><input type="email" placeholder="Enter your E-Mail"></td>
+                        </tr>
+                        <tr>
+                            <td>Password:</td>
+                            <td><input type="password"></td>
+                        </tr>
+                        <tr align="center">
+                            <td colspan="2"><input type="reset"></td>
+                            
+                        </tr>
+                    </table>
+            </div>
+            <div style="height: 100%;width:50%;float: left;">
+                <center>
+                    <table cellpadding="26">
+                        <tr>
+                            <td>Last Name:</td>
+                            <td><input type="text" placeholder="Last Name"></td>
+                        </tr>
+                        <tr>
+                            <td>DOB:</td>
+                            <td><input type="date"></td>
+                        </tr>
+                        <tr>
+                            <td>Programming Languages:</td>
+                            <td><input type="checkbox" name="pl" id="thubyon1">
+                                <label for="thubyon1">HTML</label>
+                                <input type="checkbox" name="pl" id="thubyon2">
+                                <label for="thubyon2">CSS</label>
+                                <input type="checkbox" name="pl" id="thubyon3">
+                                <label for="thubyon3">JavaScript</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ID card proof:</td>
+                            <td><input type="file"></td>
+                        </tr>
+                        <tr>
+                            <td>Username:</td>
+                            <td><input type="text" placeholder="Set Username"></td>
+                        </tr>
+                        <tr>
+                            <td>Confirm Password:</td>
+                            <td><input type="password"></td>
+                        </tr>
+                        <tr align="center">
+                            <td colspan="2"><input type="submit"></td>
+                            
+                        </tr>
+                    </table>
+            </div>
+            </center>
+            </form>
+            <!-- </fieldset> -->
+        </div>
+</body>
+</html>

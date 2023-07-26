@@ -1,0 +1,146 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+body,html {
+    background-image: linear-gradient(to right,rgb(66, 131, 153),rgb(119, 104, 129));
+    width: fill;
+    height: 100%;
+}
+header {
+    background-color: rgb(82, 82, 82);
+    height: 80px;
+    width: 100%;
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    position: fixed;
+    padding: 0;
+}
+#put{
+    position:relative;
+    left:780px;
+    bottom:100px;
+}
+#logo {
+    /* background-color: aliceblue;  */
+    height: 80px; 
+    width: 300px;
+    
+}
+#logoimg {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    left:40px;
+    top:15px;
+    border-radius: 20px;
+}
+#hdtb {
+    position: relative;
+    left: 850px;
+    bottom: 84px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+}
+#primage {
+    height: 30px;
+    width: 30px;
+}
+a:link {
+    color: aliceblue;
+    text-decoration: none;
+}
+a:visited {
+    color: aliceblue;
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(18, 169, 220);
+    text-decoration: underline;
+}
+#signin {
+    background-color: rgb(82, 82, 82);
+    opacity: 60%;
+    height: 465px;
+    width: 375px;
+    border-radius: 50px;
+    position: relative;
+    top: 170px;
+}
+#prpic {
+    /* background-color: aqua; */
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top: 10px;
+}
+#prpicimg {
+    height: 90px;
+    width: 90px;
+}
+input[type="text"],input[type="password"],input[type="email"] {
+    border-radius: 50px;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant-position: super;
+    height: 50px;
+    width: 300px;
+}
+input[type="text"]:hover,input[type="password"]:hover,input[type="email"]:hover {
+    box-shadow: 0 0px 5px whitesmoke inset,
+     0 0px 5px whitesmoke,
+      0 0px 2px whitesmoke,
+       0 0px 5px whitesmoke;
+}
+#button {
+    border-radius: 50px;
+    border: 0;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 50px;
+    width: 200px;
+    background-color: rgb(8,176,232);
+    color: white;
+}
+#button:hover {
+    cursor: pointer;
+    border: 0;
+    background-color: rgb(7, 129, 169);
+    width: 202px;
+    height: 52px;  
+    box-shadow: 0 0px 5px rgb(82, 166, 199) inset,
+     0 0px 5px rgb(82, 166, 199),
+      0 0px 5px rgb(82, 166, 199) inset,
+       0 0px 5px rgb(82, 166, 199);
+}
+#regpgm {
+    background-color: rgb(82, 82, 82);
+    color: aliceblue;
+    border-radius: 50px;
+    opacity: 60%;
+    width: 100%;
+    height: 625px;
+}
+#regpgs {
+    height: 25%;
+    width: 100%;
+    border-radius: 50px;
+}
+#regpgss1 {
+    height: 100%;
+    width: 50%;
+    border-radius: 50px;
+}
+#regpgss2 {
+    height: 100%;
+    width: 50%;
+    border-radius: 50px;
+    position: relative;
+    left: 50%;
+    bottom: 100%;
+}
+#regpgpr1 {
+    position: relative;
+    right: 20%;
+    font-weight: bolder;
+}
