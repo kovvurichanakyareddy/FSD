@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/taskone29072023.css">
+    <title>HTML Task 1 by 21A91A05F0</title>
+</head>
+<body>
+    <header>
+        <h1>HTML Elements</h1>
+        <hr>
+        <nav >
+            <table cellpadding="20">
+                <tr>
+                    <th><a href="">Home</a></th>
+                    <th><a href="#headers">Headers</a></th>
+                    <th><a href="#tables">Table</a></th>
+                    <th><a href="#lists">List</a></th>
+                    <th><a href="#tf">Text formats</a></th>
+                    <th><a href="#blockquotes">Blockquotes</a></th>
+                </tr>
+            </table>
+        </nav>
+        <hr>
+    </header>
+    <p id="headers">Pay attention to h1 tag inside section element. Font-size for h1 is the same as font-size for h2, because we have to use only one h1 on the page, and it is commonly used inside header.</p>
+    <br>
+    <h2>Header 2</h2>
+    <h3>Header 3</h3>
+    <h4>Header 4</h4>
+    <h5>Header 5</h5>
+    <h6>Header 6</h6>
+    <hr>
+    <p>Lorem ipsum dolor sit amet, <a href="">test link</a> adipiscing elit. <strong>This is strong</strong>. Nullam dignissim convallis est. Quisque aliquam. This is <i>emphasized</i>. Donec faucibus. Nunc iaculis suscipit dui. 5<sup>3</sup>=125. Water is H<sub>2</sub>O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. <em>The New York Times</em> (That's a citation).<u>Underline</u>. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. <small>Morbi imperdiet augue</small> <big>quis tellus</big>.</p>
+    <p>HTML and CSS are our tools. Mauris a ante. <span class="ysp">Suspendisse</span> quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volupat justo, eu volutpat justo, eu volutpat enim diam eget metus. To copy a file type COPY filename.<strike> Dinner's at 5:00.</strike> <mark>Let's make that 7.</mark> This <tt>text</tt> has been struck.</p>
+    <hr>
+    <h1 id="tables">Table</h1>
+    <center>
+        <table width="100%" border="1"cellspacing="0" cellpadding="5">
+            <tr>
+                <th>Header</th>
+                <th>Header</th>
+                <th>Header</th>
+            </tr>
+            <tr align="center">
+                <td>Lviv</td>
+                <td>Kyiv</td>
+                <td>Kharkiv</td>
+            </tr>
+            <tr align="center">
+                <td>Odessa</td>
+                <td>Zhytomyr</td>
+                <td>Dnipro</td>
+            </tr>
+            <tr align="center">
+                <td>Sumy</td>
+                <td>Chernivtsi</td>
+                <td>Lutsk</td>
+            </tr>
+        </table>
+    </center>
+    <h1 id="lists">Unordered List</h1>
+    <ul >
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <ul>
+            <li type="disc">Some nested list item 1</li>
+        </ul>
+        <li>List item 3</li>
+    </ul>
+    <h1>Ordered List</h1>
+    <ol>
+        <li>List item 1</li>
+        <li>List item 2</li>
+            <ol type="A"><li>Some nested list item 1</li></ol>
+        <li>List item 3</li>
+    </ol>
+    <h1>Definition List</h1>
+    <dl>
+        <dt><b>defines terms 2</b></dt>
+        <dd>description 1</dd>
+    </dl>
+    <dl>
+        <dt><b>defines terms 2</b></dt>
+        <dd>description 2</dd>
+    </dl>
+    <label for="Details">Details</label>
+    <select name="Details" id="">
+        <option>HTML</option>
+        <option>CSS</option>
+        <option>JavaScript</option>
+    </select>
+    <hr>
+    <h1 id="tf">Text formats</h1>
+    <article>
+        <h2>Article title</h2>
+        <p>Article description</p>
+    </article>
+    <h1>Preformatted Text</h1>
+    <pre>
+                Text
+        in a pre element
+            is displayed in a fixed-width
+        font, and it preserves
+        both
+            spaces and
+                line breaks
+    </pre>
+    <h1>code</h1>
+    <pre>
+    <code>
+        .wrapper {
+            display: flex;
+            vertical-align: middle;
+            justify-content: center;
+        }
+    </code>
+    </pre>
+    <h1 id="blockquotes">Blockquotes</h1>
+    <p>Let's keep it simple. Italics are good to help set it off from the body text. Be sure to style the citation.</p>
+    <blockquote>
+        <i>"If you go back a few hundred years, what we take for granted today would seem like magic-being able to talk to people over long distances, to transmit images, flying, accessing vast amounts of data like an oracle. These are all things that would have been considered magic a few hundred years ago."</i>
+        <br>
+        <a href="">Elon Musk</a>
+    </blockquote>
+    <hr>
+    <div id="fdivmain">
+        <div class="formdiv">
+            <form>
+                <label for="firstname">First name:</label>
+                <input type="text" name="firstname">
+                <br><br>
+                <label for="surname">Surname:</label>
+                <input type="text" name="surname" id="">
+                <br><br>
+                <label for="emaill">Email:</label>
+                <input type="email" name="emaill" id="">
+                <br><br>
+                <textarea name="" id="" cols="30" rows="20"></textarea>
+                <br>
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+    
+    <footer>
+        <div id="foot">
+            <br><br>
+            <center>
+                © Copyright Chanakya (21A91A05F0)
+            </center>
+        </div>
+    </footer>
+</body>
+</html>

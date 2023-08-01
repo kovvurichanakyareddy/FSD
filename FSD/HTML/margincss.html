@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Margin</title>
+    <style>
+        h1 {
+            background: lightsalmon;
+            padding: 5px;
+            transition: 2s;
+            border:5px solid lightseagreen;
+        }
+        p {
+            background: lightseagreen;
+            border: 5px solid lightsalmon;
+            transition: 2s;
+            padding: 5px;
+        }
+        h1:hover {
+            padding-left: 20%;
+        }
+        p:hover {
+            padding-left: 20%;
+        }
+        #maindiv {
+            background: lightsalmon;
+            height: 500px;
+        }
+        .subdiv {
+            background: lightseagreen;
+            margin-left: 11%;
+            margin-top: 1.5%;
+            border: 2px solid blueviolet;
+            height: 90%;
+            width: 18%;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Margin in CSS</h1>
+    <p>Fullstack Development</p>
+    <div id="maindiv">
+        <div class="subdiv"></div>
+        <div class="subdiv"></div>
+        <div class="subdiv"></div>
+    </div>
+</body>
+</html>
