@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS introduction</title>
+	<link rel="stylesheet" type="text/css" href="cssintro.css">
+	<style type="text/css">
+		#intsty {
+			color: blue;
+			font-weight: bold;
+			font-size: 18px;
+		}
+		h3 {
+			transition: 0.5s;
+			border-radius: 50px;
+			width: 200px;
+		}
+		p {
+			transition: 0.5s;
+			border-radius: 50px;
+			width: 500px;
+		}
+		h3:hover,p:hover {
+			box-shadow: 0 0 2px 2px;
+			cursor: none;
+		}
+	</style>
+</head>
+<body>
+    <center>
+	<h3>Inline Styling</h3>
+	<p style="color: orange;font-weight: bold;font-size: 22px;">This is paragraph we used inline styling</p>
+	<h3>Internal styling</h3>
+	<p id="intsty">For this paragraph we have used internal styling</p>
+	<h3>External Styling</h3>
+	<p class="extsty">We've used external CSS for this paragraph</p>
+    </center>
+</body>
+</html>

@@ -1,0 +1,30 @@
+* {
+    font-family: cursive;
+    margin: 0px;
+    padding: 0px;
+}
+div:hover {
+    cursor:wait;
+}
+#orange {
+    background-color: orange;
+    height: 100px;
+    width: 600px;
+}
+.white {
+    background-color: white;
+    height: 100px;
+    width: 600px;   
+    #blue {
+        background-color: blue;
+        height: 100%;
+        width: 17%;
+        border-radius: 50%;
+        margin: auto;
+    }
+}
+.green {
+    background-color: green;
+    height: 100px;
+    width: 600px;
+}

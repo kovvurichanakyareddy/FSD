@@ -1,0 +1,27 @@
+*{
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+pre,code {
+    background-color: silver;
+}
+#fdivmain {
+    width: 100%;
+    height: 500px;
+}
+.formdiv {
+    float: right;
+    width: 40%;
+}
+input[type="submit"] {
+    width: 300px;
+}
+.ysp {
+    background-color: rgb(246, 246, 172);
+}
+footer {
+    background-color: silver;
+}
+#foot {
+    height: 100px;
+}
+/* --by Chanakya(21A91A05F0) */

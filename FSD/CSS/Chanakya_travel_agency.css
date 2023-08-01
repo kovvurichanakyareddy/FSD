@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Raleway:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+}
+header {
+    min-height: 100px;
+    background-image: linear-gradient(to right, rgb(66, 121, 232),rgb(146, 181, 247));
+    display: flex;
+    gap: 30%;
+}
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0px;
+    transition: 3s;
+}
+header ul li a:visited {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 3s;
+}
+header a:hover {
+    text-decoration: underline;
+}
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 8.5%;
+    font-size: medium;
+    letter-spacing: 0px;
+    margin-top: 10px;
+}
+header nav ul li {
+    white-space: nowrap;
+    width: max-content;
+}
+#logo {
+    margin-left: 4%;
+    margin-top: 20px;
+    color: orange;
+    font-size: 44px;
+    font-weight: bolder;
+}
+#logo:hover {
+    cursor: pointer;
+}
+#signuporlogin {
+    background-color: orange;
+
+}
+#signuporlogin:hover {
+    background-color: rgb(255, 115, 0);
+}
+.mainblu {
+    background-image: linear-gradient(to right, rgb(66, 121, 232),rgb(146, 181, 247));
+}
+#firstone {
+    /* background-color: aqua; */
+    height: 500px;
+    transition: 0.75s;
+    #firfir {
+        /* background-color: bisque; */
+        height: 100%;
+        width: 50%;
+        float: left;
+        #firimg {
+            height:98%;
+        }
+        #firimg:hover {
+            height: 100%;
+        }
+    }
+    #firsec {
+        /* background-color: blue; */
+        height: 100%;
+        width: 50%;
+        float: right;
+    }
+}
+#travelagency {
+    font-size: 72px;
+    color: orange;
+    margin-left: 10px;
+    letter-spacing: 5px;
+    transition:0.75s;
+}
+img {
+    transition: 1.25s;
+}
+#firstone:hover {
+    height: 510px;
+    #travelagency {
+        font-size: 75px;
+    }
+}
+input[type="button"] {
+    background-color: #77AAF6;
+    height: 40px;
+    width: 150px;
+    border-radius: 60px;
+    border: 0;
+    cursor: pointer;
+    transition: .5s;
+    color: white;
+    font-weight: bolder;
+    font-size: 13px;
+}
+input[type="button"]:hover {
+    height: 42px;
+    width: 152px;
+    background-color: rgb(117, 156, 228);
+    box-shadow: 0 0 1px 1px #77AAF6;
+}
+#secondone {
+    height: 480px;
+    transition: 0.75s;
+    #secone{
+        height: 35%;
+        color: white;
+    }
+    #sectwo{
+        height: 65%;
+        /* background-color: aqua; */
+    }
+    #sechead {
+        font-size: 42px;
+        font-family: 'Montserrat', sans-serif;
+        transition: 0.75s;
+    }
+}
+#fldiv {
+    background-color: white;
+    height: 94%;
+    width: 16%;
+    float: left;
+    border-radius: 20px;
+    transition: 0.75s;
+}
+#gdiv {
+    height: 100%;
+    width: 1.5%;
+    float: left;
+}
+#fldiv:hover {
+    height: 96%;
+    width: 16.1%;
+    box-shadow: 0 0 1px 1px whitesmoke;
+}
+#secondone:hover {
+    height: 490px;
+    #sechead {
+        font-size: 44px;
+    }
+}
+#thirdone {
+    background-color: white;
+    height: 750px;
+    width: auto;
+    transition: 0.75s;
+    #thifir {
+        height: 50%;
+        transition: 0.75s;
+        #thifirf {
+            height: 100%;
+            width: 50%;
+            float: left;
+            transition: 0.75s;
+        }
+        #thifirs {
+            height: 100%;
+            width: 50%;
+            float: right;
+            transition: 0.75s;
+        }
+    }
+    #thisec {
+        height: 50%;
+        transition: 0.75s;
+        #thisecf {
+            height: 100%;
+            width: 50%;
+            float: left;
+            transition: 0.75s;
+        }
+        #thisecs {
+            height: 100%;
+            width: 50%;
+            float: right;
+            transition: 0.75s;
+        }
+    }
+}
+#express {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 42px;
+    margin-top: 30px;
+    margin-left: 40px;
+    transition: 0.75s;
+}
+#thirdimg {
+    height: 99%;
+}
+#thirdimg:hover {
+    height: 102%;
+}
+#goodvibes {
+    margin-left: 40px;
+    font-size: 18px;
+    transition: 0.5s;
+    font-weight: bold;
+    color: rgb(87, 134, 222);
+}
+#goodvibes:hover {
+    color: orange;
+    font-size: 18.2px;
+    cursor: pointer;
+}
+ul#verified {
+    list-style: none;
+    padding-left: 0;
+  }
+#verified li {
+    transition: 0.5s;
+}
+#verified  li:before {
+    content: "\2713";
+    font-size: 24px;
+    font-weight: bolder;
+    margin-right: 5px;
+  }
+#verified  li:hover {
+    color: rgb(117, 156, 228);
+    font-weight: bolder;
+    margin-right: 5px;
+    font-size: 18px;
+    cursor: default;
+    li:before {
+        color: rgb(117, 156, 228);
+        font-size: 28px;
+    }
+  }
+#thirdone:hover {
+    height: 770px;
+    #express {
+        font-size: 44px;
+    }
+}
+#fourthone {
+    height: 450px;
+    width: 100%;
+    color: white;
+    transition:0.75s;
+    #foufir {
+        height: 100%;
+        width: 60%;
+        float: left;
+    }
+    #fousec {
+        height: 100%;
+        width: 40%;
+        float: right;
+    }
+}
+#fourthimg {
+    height: 91%;
+    margin-left: 100px;
+}
+#fourthimg:hover {
+    height: 94%;
+}
+#gfbt {
+    font-weight: bolder;
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.75s;
+}
+#fourthone:hover {
+    height: 460px;
+    #gfbt {
+        font-size: 52px;
+    }
+}
+#fifthone {
+    background-color:white;
+    height: 450px;
+    width: 100%;
+    transition: 0.75s;
+    #fiffir {
+        height: 100%;
+        width: 50%;
+        float: left;
+        #fff{
+            height: 100%;
+            width: 40%;
+            float: left;
+        }
+        #ffs{
+            height: 100%;
+            width: 60%;
+            float: left;
+        }
+    }
+    #fifsec {
+        height: 100%;
+        width: 50%;
+        float: right;
+    }
+}
+#fifimg {
+    height: 96%;
+}
+#fifimg:hover {
+    height: 99%;
+}
+#cont {
+    font-size: 48px;
+    color: rgb(117, 158, 240);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: 0.75s;
+}
+#fifthone:hover {
+    height: 460px;
+    #cont {
+        font-size: 50px;
+    }
+}
+#sixthone {
+    height: 280px;
+    width: 100%;
+    color: white;
+    transition: 1s;
+    #sixthhead {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bold;
+        transition: 0.75s;
+        font-size: 44px;
+    }
+    #sixinput{
+        border: 0;
+        transition: 0.5s;
+        height: 35px;
+        width: 15%;
+        border-radius: 20px;
+        color: orange;  
+    }
+    #sixinput:hover,#sixinput:active {
+        height: 36px;
+        width: 15.5%;
+        box-shadow: 0 0 1px 1px orange;
+    }
+    #signmeup {
+        background-color: orange;
+        height: 40px;
+        width: 150px;
+        border-radius: 60px;
+        border: 0;
+        cursor: pointer;
+        transition: .5s;
+        color: white;
+        font-weight: bolder;
+        font-size: 13px;
+    }
+    #signmeup:hover {
+        height: 42px;
+        width: 152px;
+        background-color: rgb(255, 140, 0);
+        box-shadow: 0 0 1px 1px orange;
+    }
+}
+#sixthone:hover {
+    height: 300px;
+    #sixthhead {
+        font-size: 46px;
+    }
+}
+#seventhone {
+    height: 600px;
+    /* background-color: aqua; */
+    transition: 0.75s;
+    #sevfir {
+        height: 55%;
+        #sevimg {
+            height: 99.5%;
+            width: 28%;
+            transition: 1s;
+        }
+        #sevimg:hover {
+            height: 100%;
+            width: 29.5%;
+        }
+    }
+    #sevsec {
+        height: 45%;
+    }
+}
+#mobile {
+    margin-left: 25%;
+    color: rgb(117, 158, 240);
+}
+#mobile:hover {
+    color: orange;
+    cursor: pointer;
+}
+#sevhead {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 42px;
+    transition: 0.75s;
+    font-weight: bolder;
+}
+#sevneck {
+    width: 51%;
+}
+#sevlegs {
+    text-decoration: underline;font-weight: bolder;transition: 0.45s;font-size: small;cursor: pointer;letter-spacing: 0px;
+}
+#seventhone:hover {
+    height: 620px;
+    #sevhead {
+        font-size: 45px;
+    }
+}
+#eightone {
+    height: 640px;
+    transition: 0.75s;
+}
+#eigneck {
+    font-size: 42px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    color: white;
+    transition: 0.75s;
+}
+#blovk {
+    height: 92%;
+    width: 20%;
+    float: left;
+    transition: 0.75s;
+}
+.blink {
+    transition: 0.75s;
+}
+.blink:hover {
+    box-shadow: 0 0 2px 2px rgb(255, 255, 255);
+}
+.cld {
+    transition: 1s;
+}
+.cld:hover {
+    cursor: pointer;
+}
+#gaap {
+    height: 100%;
+    width: 3%;
+    float: left;
+}
+#eightone:hover {
+    height: 650px;
+    #eigneck {
+        font-size: 46px;
+    }
+}
+#footmain {
+    height: 650px;
+    width: 100%;
+    #foofir {
+        /* background-color: chocolate; */
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
+    #foosec {
+        /* background-color: tomato; */
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
+}
+#footerform input[type="email"] {
+        border: 0;
+        transition: 0.5s;
+        height: 35px;
+        width: 45%;
+        border-radius: 20px;
+        background-color: rgb(218, 218, 218);
+}
+#footerform input[type="email"]:hover,#footerform input[type="email"]:active {
+    height: 36px;
+    width: 45.5%;
+    box-shadow: 0 0 1px 1px orange;
+}
+#footerform input[type="button"] {
+    background-color: orange;
+        height: 40px;
+        width: 150px;
+        border-radius: 60px;
+        border: 0;
+        cursor: pointer;
+        transition: .5s;
+        color: white;
+        font-weight: bolder;
+        font-size: 13px;
+}
+#footerform input[type="button"]:hover {
+        height: 40px;
+        width: 152px;
+        background-color: rgb(255, 140, 0);
+        box-shadow: 0 0 1px 1px orange;
+}
+/* by Chanakya :) (21A91A05F0) */
