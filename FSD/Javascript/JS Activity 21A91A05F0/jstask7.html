@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS task 7 21A91A05F0</title>
+</head>
+<body>
+    <script>
+        let n=parseInt(window.prompt("Enter number to check for Palindrome:"))
+        let temp=n;
+        let rev=0;
+        let d=0;
+        while(temp)
+        {
+            d=temp%10;
+            rev=(rev*10)+d;
+            temp=parseInt(temp/10);
+            // document.write(rev+" ")
+        }
+        if(rev==n)
+        {
+            document.write(n+" is a Palindrome")
+        }
+        else
+        {
+            document.write(n+" is not a Palindrome")
+        }
+    </script>
+</body>
+</html>

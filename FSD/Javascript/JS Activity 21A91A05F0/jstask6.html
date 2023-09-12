@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js task 6 21A91A05F0</title>
+</head>
+<body>
+    <script>
+        let n=parseInt(window.prompt("Enter a number:"))
+        document.write("Fibonacci Sequence upto "+n+":<br>")
+        let a=0,b=1,c=a+b;
+        document.write(a+" "+b+" ")
+        for(let i=0;i<n-2;i++)
+        {
+            document.write(c+" ")
+            a=b;
+            b=c;
+            c=a+b;
+        }
+    </script>
+</body>
+</html>
