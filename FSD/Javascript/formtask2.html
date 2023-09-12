@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Task</title>
+    <style>
+        * {
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        }
+        html,body {
+            background-image: linear-gradient(to right,rgb(88, 175, 205),rgb(119, 91, 139));
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        div#main {
+            background-color: rgb(99, 99, 99);
+            width: 1200px;
+            height: 600px;
+            margin: auto;
+            margin-top: 50px;
+            border-radius: 50px;
+            opacity: 70%;
+        }
+        table {
+            color: aliceblue;
+            /* font-family: Georgia, 'Times New Roman', Times, serif; */
+            font-size: large;
+        }
+        input {
+            width: 200px;
+            height: 40px;
+            border-radius: 50px;
+            border: 0;
+            color: grey;
+            transition: 0.4s;
+        }
+        input[type="text"]:hover,input[type="password"]:hover,select:hover,input[type="radio"]:hover,input[type="checkbox"]:hover,input[type="email"]:hover,input[type="date"]:hover,input[type="number"]:hover {
+            opacity: 100%;
+            box-shadow: 0 0 1px 1px whitesmoke;
+        }
+        input[type="radio"],input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            border-radius: 50px;
+            border: 0;
+            color: grey;
+        }
+        .button {
+            background-color: rgb(19, 111, 148);
+            color: aliceblue;
+            width: 250px;
+            height: 50px;
+            border-radius: 50px;
+            opacity: 100%;
+            cursor: pointer;
+            border: 0;
+            font-size: large;
+            font-weight: bolder;
+        }
+        input[type="file"] {
+            border-radius: 0px;
+            color: skyblue;
+        }
+        .button {
+            transition: 0.75s;
+        }
+        .button:hover {
+            background-color: rgb(37, 164, 214);
+            box-shadow: 0 0 2px 2px rgb(87, 149, 174);
+            cursor: pointer;
+        }
+        #clg {
+            width: 280px;
+            height: 40px;
+            border-radius: 50px;
+            border: 0;
+            color: grey;
+            transition: 0.4s;
+        }
+        input[type="text"],input[type="email"],select,input[type=file],input[type="number"],input[type="date"],input[type="password"] {
+            font-weight: bold;
+            /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+            align-items: center;
+            font-size: 15px;
+            padding-left: 15px;
+            margin: auto;
+        }
+        .button:active,input[type="submit"],input[type="button"] {
+            background-color: rgb(19, 111, 148);
+            cursor: default;
+        }
+        #labelsdiv {
+            /* background-color: darkgoldenrod; */
+            height: 65px;
+            width: 200px;
+            padding-top: 5px;
+            float: left;
+        }
+        #inputsdiv {
+            /* background-color: darkcyan; */
+            height: 70px;
+            width: 300px;
+            float: left;
+        }
+        #gaap {
+            height: 15px;
+            /* background-color: rgb(255, 83, 48); */
+        }
+    </style>
+</head>
+<body>
+        <div id="main">
+            <div id="gaap"></div>
+            <form id="myform" onsubmit="validateform()">
+                <center>
+                    <table cellpadding="13">
+                        <tr>
+                            <td>
+                                <div id="labelsdiv"><label for="firstname">First Name:</label></div>
+                                <div id="inputsdiv"><input name="firstname" type="text" placeholder="First Name" id="givenfirstname" required name="First Name"></div>
+                            </td>
+                            <td>
+                                <div id="labelsdiv"><label for="lastname">Last Name:</label></div>
+                                <div id="inputsdiv">
+                                    <input name="lastname" type="text" id="givenlastname" placeholder="Last Name">
+                                </div>
+                                </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="labelsdiv"><label for="age">Age:</label></div>
+                                <div id="inputsdiv"><input name="age" type="number" placeholder="Enter your Age" id="givenage" required></div>
+                                </td>
+                                <td>
+                                    <div id="labelsdiv"><label for="dob">Date of Birth:</label></div>
+                                    <div id="inputsdiv"><input name="dob" type="date" id="givendob" required></div>
+                                </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="labelsdiv"><label>Gender:</label></div>
+                                <div id="labelsdiv">
+                                    <input type="radio" id="male" value="M" name="gender">
+                                    <label for="male">Male</label>
+                                    <input type="radio" id="female" value="F" name="gender">
+                                    <label for="female">Female</label>
+                                    <input type="radio" id="other" value="O" name="gender">
+                                    <label for="other">Other</label>
+                                </div>
+                                
+                            </td>
+                            <td>
+                                <div id="labelsdiv"><label for="email">Email:</label></div>
+                                <div id="inputsdiv"><input name="email" onkeyup="emailval()" id="emaill" type="email" placeholder="Enter your E-Mail" required>
+                                <p id="utsav2"></p>
+                                </div>
+                                </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="labelsdiv"><label for="clg">College:</label></div>
+                                <div id="inputsdiv">
+                                    <select name="clg" id="clg" required>
+                                        <option value="">--select--</option>
+                                        <option value="AEC">Aditya Engineering College</option>
+                                        <option value="ACET">Aditya College of Engineering & Technology</option>
+                                        <option value="ACOE">Aditya College of Engineering</option>
+                                    </select>
+                                </div>
+                                
+                            </td>
+                            <td>
+                                <div id="labelsdiv"><label for="username">Set Username:</label></div>
+                                <div id="inputsdiv">
+                                    <input name="username" type="text" id="usrname" placeholder="Set Username" onkeyup="userval()" required>
+                                    <p id="utsav"></p>
+                                </div>  
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="labelsdiv"><label>Password:</label></div>
+                                <div id="inputsdiv"><input type="password" id="givenpass" placeholder="Set Password" required></div>
+                                </td>
+                                <td>
+                                    <div id="labelsdiv"><label>Confirm Password:</label></div>
+                                    <div id="inputsdiv"><input type="password" id="confirmpass" onkeyup="passeq()" placeholder="Re-type Password" required>
+                                    <p id="utsav3"></p>
+                                    </div>
+                                    </td>
+                        </tr>
+                        <tr align="center">
+                            <td>
+                                <button onclick="rst()" class="button">Reset</button>
+                            </td>
+                            <td>
+                                <button onclick="sbt()" class="button">Submit</button>
+                            </td>
+                        </tr>
+                    </table>
+            </div>
+            <p id="testpara"></p>
+            </center>
+            </form>
+        </div>
+        <script>
+            let usernames=['chan6226'];
+            let emails=['hi@outlook.com'];
+            let firstnames=[];
+            let lastnames=[];
+            let genders=[];
+            let ages=[];
+            let colleges=[];
+            let passwords=[];
+            let useq=true,emeq=false,paeq=false;
+            sbt=()=>
+            {
+                document.getElementById('myform').submit()
+            }
+            rst=()=>
+            {
+                let confrst = window.confirm("Do you want to clear all the filled data?");
+                if(confrst==true)
+                {
+                    document.getElementById('myform').reset();
+                }
+            }
+            userval=()=>
+            {
+                if(usernames.includes(document.getElementById('usrname').value))
+                {
+                    document.getElementById('utsav').innerText="Username already Taken!";
+                    document.getElementById('utsav').style.fontSize="13px";
+                    document.getElementById('utsav').style.color="rgb(255, 83, 48)";
+                    document.getElementById('utsav').style.fontWeight="bold";
+                    useq=false;
+                }
+                else
+                {
+                    document.getElementById('utsav').innerText="Username available";
+                    document.getElementById('utsav').style.fontSize="13px";
+                    document.getElementById('utsav').style.color="rgb(0, 255, 0)";
+                    document.getElementById('utsav').style.fontWeight="bold";
+                    useq=true;
+                }
+            }
+            emailval=()=>
+            {
+                if(emails.includes(document.getElementById('emaill').value))
+                {
+                    document.getElementById('utsav2').innerText="E-Mail already registered!";
+                    document.getElementById('utsav2').style.fontSize="13px";
+                    document.getElementById('utsav2').style.color="rgb(255, 83, 48)";
+                    document.getElementById('utsav2').style.fontWeight="bold";
+                    emeq=false;
+                }
+                else
+                {
+                    document.getElementById('utsav2').innerText="";
+                    emeq=true;
+                }
+            }
+            passeq=()=>
+            {
+                if(document.getElementById('givenpass').value!=document.getElementById('confirmpass').value)
+                {
+                    document.getElementById('utsav3').innerText="It must be Equal to Password given!";
+                    document.getElementById('utsav3').style.fontSize="13px";
+                    document.getElementById('utsav3').style.color="rgb(255, 83, 48)";
+                    document.getElementById('utsav3').style.fontWeight="bold";
+                    paeq=false;
+                }
+                else
+                {
+                    document.getElementById('utsav3').innerText="";
+                    paeq=true;
+                }
+            }
+            validateform=()=>
+            {
+                if(useq==true & emeq==true & paeq==true)
+                {
+                    firstnames.push(document.getElementById('givenfirstname').value);
+                    lastnames.push(document.getElementById('givenlastname').value);
+                    document.write(firstnames);
+                    document.write(lastnames);
+                }
+                else
+                {
+                    document.write("go away lol")
+                }
+            }
+        </script>
+</body>
+</html>

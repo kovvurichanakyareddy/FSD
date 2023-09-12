@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+</head>
+<body>
+    <input type="text">
+    <button onclick="checkon()">Check</button>
+    <span id="msg_id"></span>
+    <script>
+        // let re = /batch/;
+        // let output = re.test("Fullstack Batch");
+        // if(output==true)
+        // {
+        //     console.log("Valid")
+        // }
+        // else
+        // {
+        //     console.log("Not a Valid")
+        // }
+        // console.log(output);
+        let re=/^[8][0-9]{9}$/
+        let n = document.getElementById('in_id').value;
+        output=re.test(n);
+        if(output==true)
+        {
+            document.getElementById('msg_id').innerText="Accepted!";
+            document.getElementById('msg_id').style.color="green";
+        }
+        else
+        {
+            document.getElementById('msg_id').innerText="Please enter correct Format!";
+            document.getElementById('msg_id').style.color="red";
+        }
+    </script>
+</body>
+</html>

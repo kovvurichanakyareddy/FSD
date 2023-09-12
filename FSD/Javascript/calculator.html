@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Simple Calculator - Chanakya</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?Comfortaa:wght@700&display=swap');
+        * {
+            font-family: 'Comfortaa', cursive;
+            font-weight: bolder;
+        }
+        i {
+            font-size: 32px;
+        }
+        input[type="text"] {
+            border-radius: 50px ;
+            height: 50px;
+            width: 300px;
+            border: 2px solid;
+            border-color: rgb(25, 161, 245);
+            color: rgb(0, 104, 169);
+            font-size: 20px;
+            padding-left: 10px;
+            font-weight: bold;
+            transition: 0.5s;
+        }
+        input[type="text"]:hover,input[type="text"]:focus {
+            box-shadow: 0 0 2px 2px rgb(25, 161, 245);
+        }
+        .dback {
+            background-color: rgb(25, 161, 245);
+            font-size: 32px;
+            border-radius: 20px;
+            border: 0;
+            color: white;
+            height: 60px;
+            width: 60px;
+            transition: 0.27s;
+        }
+        .dback:hover,.dback:active {
+            background-color: rgb(0, 129, 209);
+            cursor: pointer;
+        }
+        .dback:active {
+            background-color: rgb(0, 104, 169);
+            color: rgb(177, 225, 255);
+        }
+        .lback {
+            background-color: white;
+            border-radius: 20px;
+            border: 2px solid white;
+            height: 60px;
+            width: 50px;
+            font-size: 32px;
+            font-weight: bold;
+            color: rgb(25, 161, 245);
+            transition: 0.27s;
+        }
+        .lback:hover,.lback:active {
+            background-color: rgb(236, 236, 236);
+            border: 2px solid rgb(236, 236, 236);
+            color: rgb(0, 129, 209);
+            cursor: pointer;
+        }
+        .lback:active {
+            background-color: rgb(210, 210, 210);
+            border: 2px solid rgb(210, 210, 210);
+        }
+        #heading {
+            font-size: 33px;
+            color: rgb(0, 129, 209);
+            transition: 0.5s;
+        }
+        #heading:hover {
+            text-shadow: 1px 1px 5px;
+            cursor: pointer;
+        }
+        .aceq {
+            background-color: rgb(0, 104, 169);
+            color: rgb(140, 211, 255);
+        }
+        .aceq:hover {
+            color: white;
+        }
+        sup {
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <table cellspacing="5"
+        cellpadding="10">
+        <tr align="center">
+            <td colspan="4" id="heading">Chanakya's Calculator</td>
+        </tr>
+            <tr align="center">
+                <td colspan="3"><input type="text" id="inp"></td>
+                <td class="dback" onclick="backspace()"><i class="fa-solid fa-delete-left"></i></td>
+            </tr>
+            <tr align="center">
+                <td class="dback aceq" onclick="allclr()">AC</td>
+                <td class="lback" onclick="leftpar()">(</td>
+                <td class="lback" onclick="rightpar()">)</td>
+                <td class="dback" onclick="getchar('%')"><i class="fa-solid fa-percent"></i></td>
+            </tr>
+            <tr align="center">
+                <td class="lback" onclick="nsquare()">n<sup>2</sup></td>
+                <td class="lback" onclick="nqube()">n<sup>3</sup></td>
+                <td class="lback" onclick="sqroot()">√</td>
+                <td class="dback" onclick="getchar('/')"><i class="fa-solid fa-divide"></i></td>
+            </tr>
+            <tr align="center">
+                <td class="lback" onclick="getchar('7')">7</td>
+                <td class="lback" onclick="getchar('8')">8</td>
+                <td class="lback" onclick="getchar('9')">9</td>
+                <td class="dback" onclick="getchar('*')"><i class="fa-solid fa-xmark"></i></td>
+            </tr>
+            <tr align="center">
+                <td class="lback" onclick="getchar('4')">4</td>
+                <td class="lback" onclick="getchar('5')">5</td>
+                <td class="lback" onclick="getchar('6')">6</td>
+                <td class="dback" onclick="getchar('-')"><i class="fa-solid fa-minus"></i></td>
+            </tr>
+            <tr align="center">
+                <td class="lback" onclick="getchar('1')">1</td>
+                <td class="lback" onclick="getchar('2')">2</td>
+                <td class="lback" onclick="getchar('3')">3</td>
+                <td class="dback" rowspan="2" onclick="getchar('+')"><i class="fa-solid fa-plus"></i></td>
+            </tr>
+            <tr align="center">
+                <td class="lback" onclick="getchar('.')">.</td>
+                <td class="lback" onclick="getchar('0')">0</td>
+                <td class="dback aceq" onclick="equals()"><i class="fa-solid fa-equals"></i></td>
+            </tr>
+        </table>
+    </center>
+    <script>
+        let srr="";
+        let powsqr=0;
+        getchar=(ch)=>{document.getElementById('inp').value+=ch;srr=document.getElementById('inp').value}
+        equals=()=>{
+            if(powsqr==1)
+            {
+                document.getElementById('inp').value=srr;
+                powsqr=0;
+            }
+            document.getElementById('inp').value=eval(document.getElementById('inp').value);
+
+        }
+        leftpar=()=>{document.getElementById('inp').value+='(';srr=document.getElementById('inp').value}
+        rightpar=()=>{document.getElementById('inp').value+=')';srr=document.getElementById('inp').value}
+        backspace=()=>{document.getElementById('inp').value = document.getElementById('inp').value.substring(0, document.getElementById('inp').value.length - 1);srr=document.getElementById('inp').value;}
+        allclr=()=>{srr = "";document.getElementById('inp').value=srr;}
+        nsquare=()=>{
+            let givv=document.getElementById('inp').value;
+            srr = Math.pow(eval(givv),2);
+            document.getElementById('inp').value="("+givv+")"+"^2";
+            powsqr=1;
+        }
+        nqube=()=>{
+            let givv=document.getElementById('inp').value;
+            srr = Math.pow(eval(givv),3);
+            document.getElementById('inp').value="("+givv+")"+"^3";
+            powsqr=1;
+        }
+        sqroot=()=>{
+            let givv=document.getElementById('inp').value;
+            srr = Math.sqrt(eval(givv));
+            document.getElementById('inp').value="√("+givv+")";
+            powsqr=1;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid orange;
+        }
+        .main {
+            width: fit-content;
+            height: fit-content;
+        }
+        .sd {
+            height: 600px;
+            float: left;
+        }
+        .sd1 {
+            width: 800px;
+        }
+        .sd2 {
+            width: 600px;
+        }
+        .gall {
+            height: 33%;
+            align-items: center;
+            align-content: center;
+        }
+        .ig {
+            height: 95%;
+            width: 40%;
+        }
+        .sd2i {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="sd sd1">
+            <div class="gall"><img src="Images/1.jpg" onclick="ocl('1')" class="ig"></div>
+            <div class="gall"><img src="Images/2.jpg" onclick="ocl('2')" class="ig"></div>
+            <div class="gall"><img src="Images/3.jpg" onclick="ocl('3')" class="ig"></div>
+        </div>
+        <div class="sd sd2"></div>
+    </div>
+    <script>
+        var mainimg=document.getElementsByClassName("sd2")[0];
+        ocl=(iname)=>
+        {
+            mainimg.innerHTML="<img src='Images/"+iname+".jpg' class='sd2i'>";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array Methods</h1>
+    <h2>Locos Array</h2>
+    <p id="larray"></p>
+    <h2>Table</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Locomotive Name</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody id="t_body"></tbody>
+    </table>
+    <h2>List</h2>
+    <ul id="typebasedlocos">
+        <li id="passlocos"></li>
+        <li id="pass/goods"></li>
+        <li id="goodslocos"></li>
+    </ul>
+    <script>
+        let locos=['wap-1','wap-4','wap-5','wap-7','wcam-2','wcam-2p','wcam-3','wam-4','wag-5','wag-7','wag-9','wag-12'];
+        let newlocos = locos.map(function(loco,i,locos){
+            return loco.toUpperCase()});
+        document.getElementById('larray').innerText=newlocos;
+        let locoss=[
+            {
+                'name':'wap-1',
+                'type':'passenger'
+            },
+            {
+                'name':'wap-4',
+                'type':'passenger'
+            },
+            {
+                'name':'wap-5',
+                'type':'passenger'
+            },
+            {
+                'name':'wap-7',
+                'type':'passenger'
+            },
+            {
+                'name':'wcam-2',
+                'type':'passenger/goods'
+            },
+            {
+                'name':'wcam-2p',
+                'type':'passenger'
+            },
+            {
+                'name':'wcam-3',
+                'type':'passenger/goods'
+            },
+            {
+                'name':'wam-4',
+                'type':'passenger/goods'
+            },
+            {
+                'name':'wag-5',
+                'type':'goods'
+            },
+            {
+                'name':'wag-7',
+                'type':'goods'
+            },
+            {
+                'name':'wag-9',
+                'type':'goods'
+            },
+            {
+                'name':'wag-12',
+                'type':'goods'
+            }
+        ]
+        let tabstr='';
+        locoss.map(function(loco,i,locoss){
+            tabstr+="<tr><td>"+loco.name.toUpperCase()+"</td><td>"+loco.type+"</td></tr>";
+        })
+        document.getElementById('t_body').innerHTML=tabstr;
+        let liststr=['<ol>','<ol>','<ol>']
+        locoss.map(function(loco,i,locoss){
+            if(loco.type=='passenger')
+            {
+                liststr[0]+="<li>"+loco.name.toUpperCase()+"</li>";
+            }else if(loco.type=='goods')
+            {
+                liststr[2]+="<li>"+loco.name.toUpperCase()+"</li>";
+            }
+            else
+            {
+                liststr[1]+="<li>"+loco.name.toUpperCase()+"</li>";
+            }
+        })
+        liststr[0]+='</ol>';liststr[1]+='</ol>';liststr[2]+='</ol>';
+        document.getElementById('passlocos').innerHTML="Passenger Locos" + liststr[0];
+        document.getElementById('pass/goods').innerHTML="Passenger & Goods Locos"+liststr[1];
+        document.getElementById('goodslocos').innerHTML="Goods Locos"+liststr[2];
+
+    </script>
+</body>
+</html>

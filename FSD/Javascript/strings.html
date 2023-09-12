@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Strings</title>
+    </head>
+    <body>
+        <table border="1" cellspacing="0">
+            <tr>
+                <td>d</td>
+                <td>r</td>
+                <td>i</td>
+                <td>v</td>
+                <td>e</td>
+                <td>&nbsp;</td>
+                <td>r</td>
+                <td>e</td>
+                <td>a</td>
+                <td>d</td>
+                <td>y</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>-11</td>
+                <td>-10</td>
+                <td>-9</td>
+                <td>-8</td>
+                <td>-7</td>
+                <td>-6</td>
+                <td>-5</td>
+                <td>-4</td>
+                <td>-3</td>
+                <td>-2</td>
+                <td>-1</td>
+            </tr>
+        </table>
+        <script type="text/javascript">
+            let str = 'drive ready';
+            function ss(str_name)
+            {
+                document.write("<b>"+str_name+"</b><br>");
+            }
+            ss("Original String = "+str)
+            ss("String length = "+str.length)
+            ss("String length = "+str[2 ])
+            ss("Char At method = "+str.charAt(3))
+            ss("Index of = "+str.indexOf('r'))
+            ss("Last Index of = "+str.lastIndexOf('r'))
+            let str1 = 'Naruto';
+            ss('Trim method = '+str1.trim())
+            let str2 = 'Shinobi';
+            ss('Lower case = '+str2.toLowerCase())
+            ss('Upper case = '+str2.toUpperCase())
+            let str3 = 'Sasuke ';
+            let str4 = 'Tanjiro ';
+            let str5 = 'Kitagawa ';
+            let str6 = 'Nezuko ';
+            ss("concate string = "+str3.concat(str4, str5, str6));
+            let str7 = 'Hinata';
+            ss("Includes method = "+str7.includes('batch'))
+            ss("Includes method = "+str7.includes('afternoon'))
+            let str8 = 'Luffy';
+            let str9 = 'Minato';
+            console.log(str9.split("&"))
+            console.log(str9.split(";"))
+            let str10 = "Madara Uchiha";
+            ss("Starts with = "+str10.startsWith('M'))
+            ss("Starts with = "+str10.startsWith('s'))
+            let str11 = 'Nicker'
+            ss("Ends with = "+str11.endsWith('r'))
+            ss("Ends with = "+str11.endsWith('n'))
+        </script>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Functions</h1>
+    <script>
+        //Anonymous function (u can see no function name given here)
+        var output = function(num) {
+            return (num*10);
+        }
+        document.write(output(4));
+        document.write("<br>");
+
+        //Arrow synax of a function
+        mul = (num1,num2) => {
+            document.write(num1*num2);
+        }
+        mul(3,3);
+        document.write("<br>");
+
+        //Arrow function with one argument
+        getid = (num3) => {
+            document.write(num3);
+        }
+        getid("21A91A05F0");
+        document.write("<br>");
+        //callback function (the function declared as an argument to another function)
+        let timer=window.prompt("Enter no. of seconds to execute:");
+        for(let j=1;j<=timer;j++)
+        {
+            setTimeout(test1,(j*1000));
+            function test1() {
+            document.write("Executed after "+j+" second(s)<br>");
+            }
+        }
+        // setTimeout(test1,1000)
+        // setTimeout(test2,2000)
+        // setTimeout(test3,3000)
+        // function test1() {
+        //     document.write("Execute after 1 second<br>");
+        // }
+        // function test2() {
+        //     document.write("Execute after 2 seconds<br>");
+        // }
+        // function test3() {
+        //     document.write("Execute after 3 seconds<br>");
+        // }
+    </script>
+</body>
+</html>

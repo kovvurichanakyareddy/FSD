@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructing Operators</title>
+</head>
+<body>
+    <script>
+        // class Student {
+        //     constructor(rno,fname,lname,clg) {
+        //         this.rollno=rno;
+        //         this.firstname=fname;
+        //         this.lastname=lname;
+        //         this.college=clg;
+        //     }
+        // }
+        // let obj=new Student('21A91A05F0','chanakya','reddy','AEC')
+        // console.log(obj.rollno,obj.firstname,obj.lastname,obj.college);
+        class Train {
+            constructor(tno,tname,etype,rake) {
+                this.trainno=tno;
+                this.trainname=tname;
+                this.enginetype=etype;
+                this.rake=rake;
+            }
+            traindetails()
+            {
+                return this.trainno+" "+this.trainname+" "+this.enginetype+" "+this.rake;
+            }
+        }
+        let tno=prompt("Enter Train No.");
+        let tname=prompt("Enter Train Name:");
+        let obj=new Train(tno,tname,'Electric Multiple Unit (EMU)','LHB')
+        console.log(obj.traindetails())
+    </script>
+</body>
+</html>
